@@ -24,21 +24,16 @@ $("#all").click(function() {
 			var tempStr = "";
 
 			for (var i = 0; i < res.length; i++) {
-				if (i % 2 == 0) {
-					tempStr += '<div class="panel-body"> ';
-				} else {
-					tempStr += '<div class="panel-footer">';
-				}
 
 				//					
-				tempStr += '<p>';
+				tempStr += '<li><p>';
 				tempStr += res[i].Data;
 				tempStr += '</p>';
 				tempStr += '<p>';
 				tempStr += '<small><cite>' + '玩家ID:' + res[i].author + '</cite></small>';
 				tempStr += '<br>';
 				tempStr += '<small><cite>' + '完成时间戳:' + res[i].createdDate + '</cite></small>';
-				tempStr += '</p> </div> ';
+				tempStr += '</p></li> ';
 			}
 			console.log(tempStr);
 			$("#searchresult").html(tempStr);
@@ -47,4 +42,4 @@ $("#all").click(function() {
 
 });
 $("#all").click();
-
+});
